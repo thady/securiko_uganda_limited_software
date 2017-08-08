@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13ECCCA6-49B8-4585-8F90-18729CEC14A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Guard_profiler</RootNamespace>
+    <AssemblyName>Guard_profiler</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C41BDB8C3E3D12DAC13E67B6B1CA43016273733</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Guard_profiler_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>system_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="LarcomAndYoung.Windows.Forms.ReSize, Version=4.1.1130.7807, Culture=neutral, PublicKeyToken=2ccc9fa17f463fce">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\ReSize.NET.4.1\LarcomAndYoung.Windows.Forms.ReSize.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_code\Archieve_Lists.cs" />
+    <Compile Include="App_code\Guard_Employment_Records.cs" />
+    <Compile Include="App_code\HeadShotEngine.cs" />
+    <Compile Include="App_code\Position_Codes.cs" />
+    <Compile Include="App_code\Salary_scales.cs" />
+    <Compile Include="App_code\sg_Profiles.cs" />
+    <Compile Include="App_code\sg_Reports.cs" />
+    <Compile Include="App_code\SystemConst.cs" />
+    <Compile Include="App_code\System_lookups.cs" />
+    <Compile Include="App_code\Users.cs" />
+    <Compile Include="cr_active_guards_by_station.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_active_guards_by_station.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cr_all_guards_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_all_guards_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cr_archived_guard_lists.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_archived_guard_lists.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cr_guard_large_img.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_guard_large_img.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cr_kampala_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_kampala_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dt_guard_profile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dt_guard_profile.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dt_set_sg_profile_single.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dt_set_sg_profile_single.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcrystal_report_single.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcrystal_report_single.Designer.cs">
+      <DependentUpon>frmcrystal_report_single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImages.Designer.cs">
+      <DependentUpon>frmImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_active_guards_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_active_guards_report.Designer.cs">
+      <DependentUpon>frm_active_guards_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_archieved_guards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_archieved_guards.Designer.cs">
+      <DependentUpon>frm_archieved_guards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_archieved_guard_list_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_archieved_guard_list_report.Designer.cs">
+      <DependentUpon>frm_archieved_guard_list_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_archieve_lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_archieve_lists.Designer.cs">
+      <DependentUpon>frm_archieve_lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_children.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_children.Designer.cs">
+      <DependentUpon>frm_children.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_current_residential_adress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_current_residential_adress.Designer.cs">
+      <DependentUpon>frm_current_residential_adress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit_guard_number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_guard_number.Designer.cs">
+      <DependentUpon>frm_edit_guard_number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_education_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_education_history.Designer.cs">
+      <DependentUpon>frm_education_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_employment_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_employment_record.Designer.cs">
+      <DependentUpon>frm_employment_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_employment_record_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_employment_record_report.Designer.cs">
+      <DependentUpon>frm_employment_record_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_father_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_father_details.Designer.cs">
+      <DependentUpon>frm_father_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_free_guard_number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_free_guard_number.Designer.cs">
+      <DependentUpon>frm_free_guard_number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_guards_salary_scale_mapping_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_guards_salary_scale_mapping_dashboard.Designer.cs">
+      <DependentUpon>frm_guards_salary_scale_mapping_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_guard_lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_guard_lists.Designer.cs">
+      <DependentUpon>frm_guard_lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_home_adress_of_origin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_home_adress_of_origin.Designer.cs">
+      <DependentUpon>frm_home_adress_of_origin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kampala_active_guards_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kampala_active_guards_report.Designer.cs">
+      <DependentUpon>frm_kampala_active_guards_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kampal_guards_filter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kampal_guards_filter.Designer.cs">
+      <DependentUpon>frm_kampal_guards_filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_lookups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_lookups.Designer.cs">
+      <DependentUpon>frm_lookups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_officer_img_large.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_officer_img_large.Designer.cs">
+      <DependentUpon>frm_officer_img_large.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_officer_large_img_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_officer_large_img_report.Designer.cs">
+      <DependentUpon>frm_officer_large_img_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_other_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_other_info.Designer.cs">
+      <DependentUpon>frm_other_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_prev_employer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_prev_employer.Designer.cs">
+      <DependentUpon>frm_prev_employer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pre_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pre_login.Designer.cs">
+      <DependentUpon>frm_pre_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_referees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_referees.Designer.cs">
+      <DependentUpon>frm_referees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_relatives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_relatives.Designer.cs">
+      <DependentUpon>frm_relatives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_salary_scale_guards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_salary_scale_guards.Designer.cs">
+      <DependentUpon>frm_salary_scale_guards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sg_list_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sg_list_report.Designer.cs">
+      <DependentUpon>frm_sg_list_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_transfer_guards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_transfer_guards.Designer.cs">
+      <DependentUpon>frm_transfer_guards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_update_guard_position_codes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_update_guard_position_codes.Designer.cs">
+      <DependentUpon>frm_update_guard_position_codes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_users.Designer.cs">
+      <DependentUpon>frm_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guard_employment_record_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guard_employment_record_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="guard_profiles_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guard_profiles_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="guard_profiles_dbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guard_profiles_dbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="guard_profiles_dbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guard_profiles_dbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="guard_single_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>guard_single_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sg_list_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sg_list_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sg_profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sg_profiles.Designer.cs">
+      <DependentUpon>sg_profiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_first_last_names.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_first_last_names.Designer.cs">
+      <DependentUpon>update_first_last_names.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cr_active_guards_by_station.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_active_guards_by_station.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cr_all_guards_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_all_guards_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cr_archived_guard_lists.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_archived_guard_lists.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cr_guard_large_img.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_guard_large_img.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cr_kampala_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_kampala_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcrystal_report_single.resx">
+      <DependentUpon>frmcrystal_report_single.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImages.resx">
+      <DependentUpon>frmImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_active_guards_report.resx">
+      <DependentUpon>frm_active_guards_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_archieved_guards.resx">
+      <DependentUpon>frm_archieved_guards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_archieved_guard_list_report.resx">
+      <DependentUpon>frm_archieved_guard_list_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_archieve_lists.resx">
+      <DependentUpon>frm_archieve_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_children.resx">
+      <DependentUpon>frm_children.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_current_residential_adress.resx">
+      <DependentUpon>frm_current_residential_adress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_guard_number.resx">
+      <DependentUpon>frm_edit_guard_number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_education_history.resx">
+      <DependentUpon>frm_education_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_employment_record.resx">
+      <DependentUpon>frm_employment_record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_employment_record_report.resx">
+      <DependentUpon>frm_employment_record_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_father_details.resx">
+      <DependentUpon>frm_father_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_free_guard_number.resx">
+      <DependentUpon>frm_free_guard_number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_guards_salary_scale_mapping_dashboard.resx">
+      <DependentUpon>frm_guards_salary_scale_mapping_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_guard_lists.resx">
+      <DependentUpon>frm_guard_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_home_adress_of_origin.resx">
+      <DependentUpon>frm_home_adress_of_origin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kampala_active_guards_report.resx">
+      <DependentUpon>frm_kampala_active_guards_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kampal_guards_filter.resx">
+      <DependentUpon>frm_kampal_guards_filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_lookups.resx">
+      <DependentUpon>frm_lookups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_officer_img_large.resx">
+      <DependentUpon>frm_officer_img_large.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_officer_large_img_report.resx">
+      <DependentUpon>frm_officer_large_img_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_other_info.resx">
+      <DependentUpon>frm_other_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_prev_employer.resx">
+      <DependentUpon>frm_prev_employer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pre_login.resx">
+      <DependentUpon>frm_pre_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_referees.resx">
+      <DependentUpon>frm_referees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_relatives.resx">
+      <DependentUpon>frm_relatives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_salary_scale_guards.resx">
+      <DependentUpon>frm_salary_scale_guards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sg_list_report.resx">
+      <DependentUpon>frm_sg_list_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_transfer_guards.resx">
+      <DependentUpon>frm_transfer_guards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_update_guard_position_codes.resx">
+      <DependentUpon>frm_update_guard_position_codes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_users.resx">
+      <DependentUpon>frm_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guard_employment_record_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>guard_employment_record_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guard_single_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>guard_single_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="sg_list_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>sg_list_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sg_profiles.resx">
+      <DependentUpon>sg_profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_first_last_names.resx">
+      <DependentUpon>update_first_last_names.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dt_guard_profile.xsc">
+      <DependentUpon>dt_guard_profile.xsd</DependentUpon>
+    </None>
+    <None Include="dt_guard_profile.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dt_guard_profile.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dt_guard_profile.xss">
+      <DependentUpon>dt_guard_profile.xsd</DependentUpon>
+    </None>
+    <None Include="dt_set_sg_profile_single.xsc">
+      <DependentUpon>dt_set_sg_profile_single.xsd</DependentUpon>
+    </None>
+    <None Include="dt_set_sg_profile_single.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dt_set_sg_profile_single.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dt_set_sg_profile_single.xss">
+      <DependentUpon>dt_set_sg_profile_single.xsd</DependentUpon>
+    </None>
+    <None Include="Guard_profiler_TemporaryKey.pfx" />
+    <None Include="guard_profiles_dbDataSet.xsc">
+      <DependentUpon>guard_profiles_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="guard_profiles_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>guard_profiles_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="guard_profiles_dbDataSet.xss">
+      <DependentUpon>guard_profiles_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="guard_profiles_dbDataSet1.xsc">
+      <DependentUpon>guard_profiles_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="guard_profiles_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>guard_profiles_dbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="guard_profiles_dbDataSet1.xss">
+      <DependentUpon>guard_profiles_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="guard_profiles_dbDataSet2.xsc">
+      <DependentUpon>guard_profiles_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="guard_profiles_dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>guard_profiles_dbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="guard_profiles_dbDataSet2.xss">
+      <DependentUpon>guard_profiles_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\loginimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\arrrrr.png" />
+    <Content Include="system_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
