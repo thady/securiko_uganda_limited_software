@@ -372,11 +372,14 @@ namespace Guard_profiler
                     MemoryStream stream = new MemoryStream(data);
                     picBoxImage.Image = Image.FromStream(stream);
                 }
+                else
+                {
+                    picBoxImage.Image = null;
+                    picBoxImage.Image = Guard_profiler.Properties.Resources.loginimg;
+
+                }
             }
-            else
-            {
-                picBoxImage.Image = null;
-            }
+           
         }
 
         private void btnReport_Click(object sender, EventArgs e)

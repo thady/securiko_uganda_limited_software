@@ -30,7 +30,9 @@ namespace Guard_profiler
             ParameterField paramField = new ParameterField();
             ParameterDiscreteValue paramDiscreteValue = new ParameterDiscreteValue();
 
-            report.SetDatabaseLogon("", "sg_admin123"); //hide the password from the code..get it from configuration file...
+            foreach (CrystalDecisions.CrystalReports.Engine.Table tbCurrent in report.Database.Tables)
+                Set_Report_logons.SetTableLogin(tbCurrent);
+
             report.SetDataSource(sg_Reports.SELECT_GUARD_LIST("SELECT_GUARD_LIST"));
             report.SetParameterValue("QueryName", "SELECT_GUARD_LIST");
             report_sg_lists.ParameterFieldInfo = paramFields;
