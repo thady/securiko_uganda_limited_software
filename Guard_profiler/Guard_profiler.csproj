@@ -640,6 +640,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\arrrrr.png" />
+    <None Include="resources\image_placeholder.jpg" />
     <Content Include="system_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

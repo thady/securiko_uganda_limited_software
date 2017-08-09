@@ -375,7 +375,7 @@ namespace Guard_profiler
                 else
                 {
                     picBoxImage.Image = null;
-                    picBoxImage.Image = Guard_profiler.Properties.Resources.loginimg;
+                    picBoxImage.Image = Guard_profiler.Properties.Resources.image_placeholder;
 
                 }
             }

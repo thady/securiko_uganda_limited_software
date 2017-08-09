@@ -73,7 +73,7 @@
             // 
             this.lognpxt.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.lognpxt.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.lognpxt.Image = global::Guard_profiler.Properties.Resources.loginimg;
+            this.lognpxt.Image = global::Guard_profiler.Properties.Resources.loginimg1;
             this.lognpxt.Location = new System.Drawing.Point(6, 19);
             this.lognpxt.Name = "lognpxt";
             this.lognpxt.Size = new System.Drawing.Size(130, 103);
