@@ -31,7 +31,8 @@ namespace Guard_profiler
             ParameterDiscreteValue paramDiscreteValue = new ParameterDiscreteValue();
 
 
-            report.SetDatabaseLogon("sg_admin", "sg_admin123"); //hide the password from the code..get it from configuration file...
+            foreach (CrystalDecisions.CrystalReports.Engine.Table tbCurrent in report.Database.Tables)
+                Set_Report_logons.SetTableLogin(tbCurrent);
 
             report.SetDataSource(sg_Reports.SELECT_ACTIVE_GUARDS_BY_STATION("",SystemConst._branch));
             report.SetParameterValue("QueryName", "SELECT_ACTIVE_GUARDS_BY_STATION");

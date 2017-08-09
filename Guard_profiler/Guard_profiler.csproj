@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -101,6 +101,7 @@
     <Compile Include="App_code\HeadShotEngine.cs" />
     <Compile Include="App_code\Position_Codes.cs" />
     <Compile Include="App_code\Salary_scales.cs" />
+    <Compile Include="App_code\Set_Report_logons.cs" />
     <Compile Include="App_code\sg_Profiles.cs" />
     <Compile Include="App_code\sg_Reports.cs" />
     <Compile Include="App_code\SystemConst.cs" />

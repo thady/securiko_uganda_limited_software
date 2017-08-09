@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 using CrystalDecisions.Shared;
 using Guard_profiler.App_code;
 
@@ -15,6 +17,10 @@ namespace Guard_profiler
 {
     public partial class frm_kampala_active_guards_report : Form
     {
+        //set connection string 
+        static string SQLConnection = System.Configuration.ConfigurationManager.ConnectionStrings["sg_conn_str"].ToString();
+        SqlConnectionStringBuilder builder = new System.Data.SqlClient.SqlConnectionStringBuilder(SQLConnection);
+
         public frm_kampala_active_guards_report()
         {
             InitializeComponent();
@@ -30,8 +36,8 @@ namespace Guard_profiler
             ParameterField paramField = new ParameterField();
             ParameterDiscreteValue paramDiscreteValue = new ParameterDiscreteValue();
 
-
-            report.SetDatabaseLogon("sg_admin", "sg_admin123"); //hide the password from the code..get it from configuration file...
+            foreach (CrystalDecisions.CrystalReports.Engine.Table tbCurrent in report.Database.Tables)
+                Set_Report_logons.SetTableLogin(tbCurrent);
 
             report.SetDataSource(sg_Reports.SELECT_ACTIVE_GUARDS_KAMPALA("", SystemConst._branch));
             //check if user selected kampala

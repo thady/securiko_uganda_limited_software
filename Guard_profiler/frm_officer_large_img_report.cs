@@ -31,7 +31,8 @@ namespace Guard_profiler
             ParameterField paramField = new ParameterField();
             ParameterDiscreteValue paramDiscreteValue = new ParameterDiscreteValue();
 
-            report.SetDatabaseLogon("sg_admin", "sg_admin123"); //hide the password from the code..get it from configuration file...
+            foreach (CrystalDecisions.CrystalReports.Engine.Table tbCurrent in report.Database.Tables)
+                Set_Report_logons.SetTableLogin(tbCurrent);
 
             report.SetDataSource(sg_Reports.SELECT_GUARD_LARGE_IMAGE_RPT("", SystemConst.guard_number));
             report.SetParameterValue("QueryName", "SELECT_GUARD_LARGE_IMAGE_RPT");
