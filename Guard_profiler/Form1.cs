@@ -201,5 +201,11 @@ namespace Guard_profiler
             frm_guards_salary_scale_mapping_dashboard scale_mapping = new frm_guards_salary_scale_mapping_dashboard();
             scale_mapping.ShowDialog();
         }
+
+        private void otherEmployeeSalaryScaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_assign_salary_scales_to_guards scale = new frm_assign_salary_scales_to_guards();
+            scale.Show();
+        }
     }
 }

@@ -1548,9 +1548,9 @@
             this.groupBox1.Controls.Add(this.txt_sg_f_name);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(21, 0);
+            this.groupBox1.Location = new System.Drawing.Point(6, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(483, 315);
+            this.groupBox1.Size = new System.Drawing.Size(498, 315);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Guard Bio Data";
@@ -1926,7 +1926,7 @@
             this.reSize1.AutoCenterFormOnLoad = false;
             this.reSize1.Enabled = true;
             this.reSize1.HostContainer = this;
-            this.reSize1.InitialHostContainerHeight = 737D;
+            this.reSize1.InitialHostContainerHeight = 729D;
             this.reSize1.InitialHostContainerWidth = 1154D;
             this.reSize1.Tag = null;
             // 
@@ -1935,7 +1935,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1154, 737);
+            this.ClientSize = new System.Drawing.Size(1154, 729);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

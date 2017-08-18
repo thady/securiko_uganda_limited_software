@@ -21,10 +21,10 @@ namespace Guard_profiler
 
         private void frm_guards_salary_scale_mapping_dashboard_Load(object sender, EventArgs e)
         {
-            return_guard_salary_mappings();
+            Return_guard_salary_mappings();
         }
 
-        protected void return_guard_salary_mappings()
+        protected void Return_guard_salary_mappings()
         {
             DataTable dt = Salary_scales.return_guard_salary_mappings("return_guard_salary_mappings");
             if (dt.Rows.Count > 0)
@@ -33,8 +33,8 @@ namespace Guard_profiler
 
                 gdv_guard_salaries.Columns[0].HeaderText = "Guard Name";
                 gdv_guard_salaries.Columns[1].HeaderText = "Branch";
-                gdv_guard_salaries.Columns[2].HeaderText = "Duration Served(Years)";
-                gdv_guard_salaries.Columns[3].HeaderText = "Salary Scale";
+                gdv_guard_salaries.Columns[2].HeaderText = "Duration Served(Years):0 Means Less than a year";
+                gdv_guard_salaries.Columns[3].HeaderText = "Posible Salary Scale";
 
                 gdv_guard_salaries.DefaultCellStyle.SelectionBackColor = Color.White;
                 gdv_guard_salaries.DefaultCellStyle.SelectionForeColor = Color.Black;
@@ -55,6 +55,10 @@ namespace Guard_profiler
                 {
                     c.DefaultCellStyle.Font = new Font("Arial", 12.5F, GraphicsUnit.Pixel);
                 }
+
+                //set the background color of the header row
+                gdv_guard_salaries.ColumnHeadersDefaultCellStyle.BackColor = Color.CadetBlue;
+                gdv_guard_salaries.EnableHeadersVisualStyles = false;
             }
         }
     }

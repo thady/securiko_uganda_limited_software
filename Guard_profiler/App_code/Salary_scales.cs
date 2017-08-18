@@ -184,8 +184,8 @@ namespace Guard_profiler.App_code
                     cmd.Parameters["@QueryName"].Value = myQuery;
 
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@years_served", SqlDbType.Int);
-                    cmd.Parameters["@years_served"].Value = years_served;
+                    cmd.Parameters.Add("@months_served", SqlDbType.Int);
+                    cmd.Parameters["@months_served"].Value = years_served;
 
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@guard_auto_id", SqlDbType.Int);
@@ -195,6 +195,69 @@ namespace Guard_profiler.App_code
                     cmd.Parameters.Add("@guard_number", SqlDbType.NVarChar,50);
                     cmd.Parameters["@guard_number"].Value = guard_number;
 
+
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    cmd.Connection = conn;
+                    cmd.ExecuteNonQuery();
+
+                    cmd.Parameters.Clear();
+
+                    if (conn.State != ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        //manually assign salary scale to guard
+        public static void Salary_scale_manual_assigment_query(string myQuery,int guard_auto_id, string guard_number,int scale_id,string user_name,int previous_scale_id)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["sg_conn_str"].ToString()))
+                using (SqlCommand cmd = new SqlCommand("sp_salary_scales", conn))
+                {
+                    cmd.CommandTimeout = 3600;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@QueryName", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@QueryName"].Value = myQuery;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@guard_auto_id", SqlDbType.Int);
+                    cmd.Parameters["@guard_auto_id"].Value = guard_auto_id;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@guard_number", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@guard_number"].Value = guard_number;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@scale_id", SqlDbType.Int);
+                    cmd.Parameters["@scale_id"].Value = scale_id;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@user_name", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@user_name"].Value = user_name;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@previous_scale_id", SqlDbType.Int);
+                    cmd.Parameters["@previous_scale_id"].Value = previous_scale_id;
 
                     if (conn.State == ConnectionState.Closed)
                     {

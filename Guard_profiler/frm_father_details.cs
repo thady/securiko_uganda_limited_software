@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Guard_profiler.App_code;
-using System.Data;
 using System.IO;
 
 namespace Guard_profiler

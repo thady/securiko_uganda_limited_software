@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_guards_salary_scale_mapping_dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gdv_guard_salaries = new System.Windows.Forms.DataGridView();
             this.reSize1 = new LarcomAndYoung.Windows.Forms.ReSize(this.components);
@@ -38,10 +39,11 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.Controls.Add(this.gdv_guard_salaries);
-            this.panel1.Location = new System.Drawing.Point(3, 12);
+            this.panel1.Location = new System.Drawing.Point(3, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(660, 497);
+            this.panel1.Size = new System.Drawing.Size(660, 508);
             this.panel1.TabIndex = 0;
             // 
             // gdv_guard_salaries
@@ -54,6 +56,7 @@
             this.gdv_guard_salaries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdv_guard_salaries.Location = new System.Drawing.Point(9, 21);
             this.gdv_guard_salaries.Name = "gdv_guard_salaries";
+            this.gdv_guard_salaries.ReadOnly = true;
             this.gdv_guard_salaries.Size = new System.Drawing.Size(648, 473);
             this.gdv_guard_salaries.TabIndex = 0;
             // 
@@ -71,9 +74,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(667, 521);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_guards_salary_scale_mapping_dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guards Salaries";

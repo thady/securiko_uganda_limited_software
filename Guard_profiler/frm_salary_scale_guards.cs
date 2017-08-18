@@ -53,6 +53,11 @@ namespace Guard_profiler
                 gdv_salary_scales.Columns[0].Visible = false;
                 gdv_salary_scales.Columns[1].Visible = false;
                 gdv_salary_scales.Columns[2].Visible = false;
+                gdv_salary_scales.Columns["basic_amount"].HeaderText = "Basic Amount";
+                gdv_salary_scales.Columns["salary_amount"].HeaderText = "Salary Amount";
+                gdv_salary_scales.Columns["scale_name"].HeaderText = "Scale Name";
+                gdv_salary_scales.Columns["transport_amount"].HeaderText = "Transport Amount";
+                gdv_salary_scales.Columns["housing_amount"].HeaderText = "Housing Amount";
 
                 gdv_salary_scales.DefaultCellStyle.SelectionBackColor = Color.White;
                 gdv_salary_scales.DefaultCellStyle.SelectionForeColor = Color.Black;

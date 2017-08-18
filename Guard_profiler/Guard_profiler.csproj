@@ -195,6 +195,12 @@
     <Compile Include="frm_archieve_lists.Designer.cs">
       <DependentUpon>frm_archieve_lists.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_assign_salary_scales_to_guards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_assign_salary_scales_to_guards.Designer.cs">
+      <DependentUpon>frm_assign_salary_scales_to_guards.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_children.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_archieve_lists.resx">
       <DependentUpon>frm_archieve_lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_assign_salary_scales_to_guards.resx">
+      <DependentUpon>frm_assign_salary_scales_to_guards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_children.resx">
       <DependentUpon>frm_children.cs</DependentUpon>

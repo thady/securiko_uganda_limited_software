@@ -41,46 +41,46 @@
             this.lbl_name_message = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.guardProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardProfilesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nonGuardProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leaveManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageStationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeNumberFromGuardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.transferGuardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageSalaryScalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardsSalaryScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.otherEmployeeSalaryScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.assignSalaryScaleToEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.manageSalaryAdvancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.otherDeductionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.recordSalaryPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.activeGuardsByBranchReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.allGuardsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.archievedGuardsReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageDepartmentsBranchesPositionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updatePositionCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageSalaryScalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardProfilesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.nonGuardProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assignSalaryScaleToEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageSalaryAdvancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherDeductionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recordSalaryPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardsSalaryScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherEmployeeSalaryScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.manageDepartmentsBranchesPositionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.updatePositionCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -210,7 +210,7 @@
             this.adminToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1362, 61);
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 61);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -224,6 +224,19 @@
             this.guardProfilesToolStripMenuItem.Size = new System.Drawing.Size(74, 57);
             this.guardProfilesToolStripMenuItem.Text = "Profiles";
             this.guardProfilesToolStripMenuItem.Click += new System.EventHandler(this.guardProfilesToolStripMenuItem_Click);
+            // 
+            // guardProfilesToolStripMenuItem1
+            // 
+            this.guardProfilesToolStripMenuItem1.Name = "guardProfilesToolStripMenuItem1";
+            this.guardProfilesToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
+            this.guardProfilesToolStripMenuItem1.Text = "Guard Profiles";
+            this.guardProfilesToolStripMenuItem1.Click += new System.EventHandler(this.guardProfilesToolStripMenuItem1_Click);
+            // 
+            // nonGuardProfilesToolStripMenuItem
+            // 
+            this.nonGuardProfilesToolStripMenuItem.Name = "nonGuardProfilesToolStripMenuItem";
+            this.nonGuardProfilesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.nonGuardProfilesToolStripMenuItem.Text = "Other Staff Profiles";
             // 
             // leaveManagementToolStripMenuItem
             // 
@@ -252,6 +265,11 @@
             this.removeNumberFromGuardToolStripMenuItem.Text = "Remove Number from Guard";
             this.removeNumberFromGuardToolStripMenuItem.Click += new System.EventHandler(this.removeNumberFromGuardToolStripMenuItem_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(281, 6);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -259,87 +277,17 @@
             this.toolStripMenuItem2.Text = "Transfer Guards";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(281, 6);
+            // 
             // transferGuardToolStripMenuItem
             // 
             this.transferGuardToolStripMenuItem.Name = "transferGuardToolStripMenuItem";
             this.transferGuardToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
             this.transferGuardToolStripMenuItem.Text = "Archieved List";
             this.transferGuardToolStripMenuItem.Click += new System.EventHandler(this.transferGuardToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.activeGuardsByBranchReportToolStripMenuItem,
-            this.toolStripSeparator10,
-            this.toolStripMenuItem3,
-            this.toolStripSeparator9,
-            this.allGuardsReportToolStripMenuItem,
-            this.toolStripSeparator8,
-            this.archievedGuardsReportsToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(76, 57);
-            this.toolStripMenuItem1.Text = "Reports";
-            // 
-            // activeGuardsByBranchReportToolStripMenuItem
-            // 
-            this.activeGuardsByBranchReportToolStripMenuItem.Name = "activeGuardsByBranchReportToolStripMenuItem";
-            this.activeGuardsByBranchReportToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
-            this.activeGuardsByBranchReportToolStripMenuItem.Text = "Active Guards by Branch Reports";
-            this.activeGuardsByBranchReportToolStripMenuItem.Click += new System.EventHandler(this.activeGuardsByBranchReportToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(307, 26);
-            this.toolStripMenuItem3.Text = "Kampala Guards Reports";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // allGuardsReportToolStripMenuItem
-            // 
-            this.allGuardsReportToolStripMenuItem.Name = "allGuardsReportToolStripMenuItem";
-            this.allGuardsReportToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
-            this.allGuardsReportToolStripMenuItem.Text = "All Guards Report";
-            this.allGuardsReportToolStripMenuItem.Click += new System.EventHandler(this.allGuardsReportToolStripMenuItem_Click);
-            // 
-            // archievedGuardsReportsToolStripMenuItem
-            // 
-            this.archievedGuardsReportsToolStripMenuItem.Name = "archievedGuardsReportsToolStripMenuItem";
-            this.archievedGuardsReportsToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
-            this.archievedGuardsReportsToolStripMenuItem.Text = "Archieved Guards Reports";
-            this.archievedGuardsReportsToolStripMenuItem.Click += new System.EventHandler(this.archievedGuardsReportsToolStripMenuItem_Click);
-            // 
-            // adminToolStripMenuItem
-            // 
-            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageUsersToolStripMenuItem,
-            this.toolStripSeparator11,
-            this.manageDepartmentsBranchesPositionsToolStripMenuItem,
-            this.toolStripSeparator12,
-            this.updatePositionCodesToolStripMenuItem});
-            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(68, 57);
-            this.adminToolStripMenuItem.Text = "Admin";
-            // 
-            // manageUsersToolStripMenuItem
-            // 
-            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
-            this.manageUsersToolStripMenuItem.Text = "Manage users";
-            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
-            // 
-            // manageDepartmentsBranchesPositionsToolStripMenuItem
-            // 
-            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Name = "manageDepartmentsBranchesPositionsToolStripMenuItem";
-            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
-            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Text = "Manage Departments,Branches & Positions";
-            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Click += new System.EventHandler(this.manageDepartmentsBranchesPositionsToolStripMenuItem_Click);
-            // 
-            // updatePositionCodesToolStripMenuItem
-            // 
-            this.updatePositionCodesToolStripMenuItem.Name = "updatePositionCodesToolStripMenuItem";
-            this.updatePositionCodesToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
-            this.updatePositionCodesToolStripMenuItem.Text = "Update Position Codes";
-            this.updatePositionCodesToolStripMenuItem.Click += new System.EventHandler(this.updatePositionCodesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -371,43 +319,6 @@
             this.manageSalaryScalesToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
             this.manageSalaryScalesToolStripMenuItem.Text = "Manage Salary Scales";
             // 
-            // guardProfilesToolStripMenuItem1
-            // 
-            this.guardProfilesToolStripMenuItem1.Name = "guardProfilesToolStripMenuItem1";
-            this.guardProfilesToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
-            this.guardProfilesToolStripMenuItem1.Text = "Guard Profiles";
-            this.guardProfilesToolStripMenuItem1.Click += new System.EventHandler(this.guardProfilesToolStripMenuItem1_Click);
-            // 
-            // nonGuardProfilesToolStripMenuItem
-            // 
-            this.nonGuardProfilesToolStripMenuItem.Name = "nonGuardProfilesToolStripMenuItem";
-            this.nonGuardProfilesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.nonGuardProfilesToolStripMenuItem.Text = "Other Staff Profiles";
-            // 
-            // assignSalaryScaleToEmployeeToolStripMenuItem
-            // 
-            this.assignSalaryScaleToEmployeeToolStripMenuItem.Name = "assignSalaryScaleToEmployeeToolStripMenuItem";
-            this.assignSalaryScaleToEmployeeToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
-            this.assignSalaryScaleToEmployeeToolStripMenuItem.Text = "Assign Salary scale to employee";
-            // 
-            // manageSalaryAdvancesToolStripMenuItem
-            // 
-            this.manageSalaryAdvancesToolStripMenuItem.Name = "manageSalaryAdvancesToolStripMenuItem";
-            this.manageSalaryAdvancesToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
-            this.manageSalaryAdvancesToolStripMenuItem.Text = "Salary Advances";
-            // 
-            // otherDeductionsToolStripMenuItem
-            // 
-            this.otherDeductionsToolStripMenuItem.Name = "otherDeductionsToolStripMenuItem";
-            this.otherDeductionsToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
-            this.otherDeductionsToolStripMenuItem.Text = "Other Deductions";
-            // 
-            // recordSalaryPaymentsToolStripMenuItem
-            // 
-            this.recordSalaryPaymentsToolStripMenuItem.Name = "recordSalaryPaymentsToolStripMenuItem";
-            this.recordSalaryPaymentsToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
-            this.recordSalaryPaymentsToolStripMenuItem.Text = "Record salary Payments";
-            // 
             // guardsSalaryScaleToolStripMenuItem
             // 
             this.guardsSalaryScaleToolStripMenuItem.Name = "guardsSalaryScaleToolStripMenuItem";
@@ -415,31 +326,67 @@
             this.guardsSalaryScaleToolStripMenuItem.Text = "Guards Salary Scale";
             this.guardsSalaryScaleToolStripMenuItem.Click += new System.EventHandler(this.guardsSalaryScaleToolStripMenuItem_Click);
             // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(354, 6);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(357, 26);
+            this.toolStripMenuItem6.Text = "Guard salary scale mappings dashboard";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(354, 6);
+            // 
             // otherEmployeeSalaryScaleToolStripMenuItem
             // 
             this.otherEmployeeSalaryScaleToolStripMenuItem.Name = "otherEmployeeSalaryScaleToolStripMenuItem";
             this.otherEmployeeSalaryScaleToolStripMenuItem.Size = new System.Drawing.Size(357, 26);
-            this.otherEmployeeSalaryScaleToolStripMenuItem.Text = "Other Employee salary scale";
+            this.otherEmployeeSalaryScaleToolStripMenuItem.Text = "Assign salary scale to guard";
+            this.otherEmployeeSalaryScaleToolStripMenuItem.Click += new System.EventHandler(this.otherEmployeeSalaryScaleToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
+            // toolStripSeparator4
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(298, 6);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(298, 6);
             // 
-            // toolStripSeparator2
+            // assignSalaryScaleToEmployeeToolStripMenuItem
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(298, 6);
+            this.assignSalaryScaleToEmployeeToolStripMenuItem.Name = "assignSalaryScaleToEmployeeToolStripMenuItem";
+            this.assignSalaryScaleToEmployeeToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.assignSalaryScaleToEmployeeToolStripMenuItem.Text = "Assign Salary scale to employee";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(298, 6);
             // 
-            // toolStripSeparator4
+            // manageSalaryAdvancesToolStripMenuItem
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(298, 6);
+            this.manageSalaryAdvancesToolStripMenuItem.Name = "manageSalaryAdvancesToolStripMenuItem";
+            this.manageSalaryAdvancesToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.manageSalaryAdvancesToolStripMenuItem.Text = "Salary Advances";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(298, 6);
+            // 
+            // otherDeductionsToolStripMenuItem
+            // 
+            this.otherDeductionsToolStripMenuItem.Name = "otherDeductionsToolStripMenuItem";
+            this.otherDeductionsToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.otherDeductionsToolStripMenuItem.Text = "Other Deductions";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(298, 6);
             // 
             // toolStripMenuItem5
             // 
@@ -452,64 +399,118 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(298, 6);
             // 
-            // toolStripSeparator6
+            // recordSalaryPaymentsToolStripMenuItem
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(281, 6);
+            this.recordSalaryPaymentsToolStripMenuItem.Name = "recordSalaryPaymentsToolStripMenuItem";
+            this.recordSalaryPaymentsToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.recordSalaryPaymentsToolStripMenuItem.Text = "Record salary Payments";
             // 
-            // toolStripSeparator7
+            // toolStripMenuItem1
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(281, 6);
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.activeGuardsByBranchReportToolStripMenuItem,
+            this.toolStripSeparator10,
+            this.toolStripMenuItem3,
+            this.toolStripSeparator9,
+            this.allGuardsReportToolStripMenuItem,
+            this.toolStripSeparator8,
+            this.archievedGuardsReportsToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(76, 57);
+            this.toolStripMenuItem1.Text = "Reports";
             // 
-            // toolStripSeparator8
+            // activeGuardsByBranchReportToolStripMenuItem
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(304, 6);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(304, 6);
+            this.activeGuardsByBranchReportToolStripMenuItem.Name = "activeGuardsByBranchReportToolStripMenuItem";
+            this.activeGuardsByBranchReportToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
+            this.activeGuardsByBranchReportToolStripMenuItem.Text = "Active Guards by Branch Reports";
+            this.activeGuardsByBranchReportToolStripMenuItem.Click += new System.EventHandler(this.activeGuardsByBranchReportToolStripMenuItem_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
             this.toolStripSeparator10.Size = new System.Drawing.Size(304, 6);
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(307, 26);
+            this.toolStripMenuItem3.Text = "Kampala Guards Reports";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(304, 6);
+            // 
+            // allGuardsReportToolStripMenuItem
+            // 
+            this.allGuardsReportToolStripMenuItem.Name = "allGuardsReportToolStripMenuItem";
+            this.allGuardsReportToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
+            this.allGuardsReportToolStripMenuItem.Text = "All Guards Report";
+            this.allGuardsReportToolStripMenuItem.Click += new System.EventHandler(this.allGuardsReportToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(304, 6);
+            // 
+            // archievedGuardsReportsToolStripMenuItem
+            // 
+            this.archievedGuardsReportsToolStripMenuItem.Name = "archievedGuardsReportsToolStripMenuItem";
+            this.archievedGuardsReportsToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
+            this.archievedGuardsReportsToolStripMenuItem.Text = "Archieved Guards Reports";
+            this.archievedGuardsReportsToolStripMenuItem.Click += new System.EventHandler(this.archievedGuardsReportsToolStripMenuItem_Click);
+            // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageUsersToolStripMenuItem,
+            this.toolStripSeparator11,
+            this.manageDepartmentsBranchesPositionsToolStripMenuItem,
+            this.toolStripSeparator12,
+            this.updatePositionCodesToolStripMenuItem});
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(68, 57);
+            this.adminToolStripMenuItem.Text = "Admin";
+            // 
+            // manageUsersToolStripMenuItem
+            // 
+            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
+            this.manageUsersToolStripMenuItem.Text = "Manage users";
+            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
+            // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(364, 6);
+            // 
+            // manageDepartmentsBranchesPositionsToolStripMenuItem
+            // 
+            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Name = "manageDepartmentsBranchesPositionsToolStripMenuItem";
+            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
+            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Text = "Manage Departments,Branches & Positions";
+            this.manageDepartmentsBranchesPositionsToolStripMenuItem.Click += new System.EventHandler(this.manageDepartmentsBranchesPositionsToolStripMenuItem_Click);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(364, 6);
             // 
-            // toolStripMenuItem6
+            // updatePositionCodesToolStripMenuItem
             // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(357, 26);
-            this.toolStripMenuItem6.Text = "Guard salary scale mappings dashboard";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
-            // 
-            // toolStripSeparator13
-            // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(354, 6);
-            // 
-            // toolStripSeparator14
-            // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(354, 6);
+            this.updatePositionCodesToolStripMenuItem.Name = "updatePositionCodesToolStripMenuItem";
+            this.updatePositionCodesToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
+            this.updatePositionCodesToolStripMenuItem.Text = "Update Position Codes";
+            this.updatePositionCodesToolStripMenuItem.Click += new System.EventHandler(this.updatePositionCodesToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
