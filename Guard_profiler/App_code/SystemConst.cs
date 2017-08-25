@@ -18,6 +18,9 @@ namespace Guard_profiler.App_code
         public static string _Single_report_type = String.Empty;
         public static string _guard_status = String.Empty;
         public static string _Report_update_month = String.Empty;
+        public static string _client_name = String.Empty;
+        public static string _client_code = String.Empty;
+        public static string _client_id = String.Empty;
 
         public static string GET_OfficerID()
         {

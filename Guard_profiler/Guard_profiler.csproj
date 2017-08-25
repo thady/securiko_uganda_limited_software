@@ -97,6 +97,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_code\Archieve_Lists.cs" />
+    <Compile Include="App_code\Clients.cs" />
+    <Compile Include="App_code\Guard_deployment.cs" />
     <Compile Include="App_code\Guard_Employment_Records.cs" />
     <Compile Include="App_code\HeadShotEngine.cs" />
     <Compile Include="App_code\Position_Codes.cs" />
@@ -170,6 +172,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_accounts_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_accounts_panel.Designer.cs">
+      <DependentUpon>frm_accounts_panel.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_active_guards_report.cs">
       <SubType>Form</SubType>
@@ -255,6 +263,12 @@
     <Compile Include="frm_guards_salary_scale_mapping_dashboard.Designer.cs">
       <DependentUpon>frm_guards_salary_scale_mapping_dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_guard_deployment_summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_guard_deployment_summary.Designer.cs">
+      <DependentUpon>frm_guard_deployment_summary.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_guard_lists.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +280,12 @@
     </Compile>
     <Compile Include="frm_home_adress_of_origin.Designer.cs">
       <DependentUpon>frm_home_adress_of_origin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hr_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_hr_panel.Designer.cs">
+      <DependentUpon>frm_hr_panel.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_kampala_active_guards_report.cs">
       <SubType>Form</SubType>
@@ -284,6 +304,18 @@
     </Compile>
     <Compile Include="frm_lookups.Designer.cs">
       <DependentUpon>frm_lookups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_clients.Designer.cs">
+      <DependentUpon>frm_manage_clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_client_locations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_client_locations.Designer.cs">
+      <DependentUpon>frm_manage_client_locations.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_officer_img_large.cs">
       <SubType>Form</SubType>
@@ -356,6 +388,12 @@
     </Compile>
     <Compile Include="frm_users.Designer.cs">
       <DependentUpon>frm_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_wages_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_wages_panel.Designer.cs">
+      <DependentUpon>frm_wages_panel.cs</DependentUpon>
     </Compile>
     <Compile Include="guard_employment_record_report.cs">
       <AutoGen>True</AutoGen>
@@ -436,6 +474,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_accounts_panel.resx">
+      <DependentUpon>frm_accounts_panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_active_guards_report.resx">
       <DependentUpon>frm_active_guards_report.cs</DependentUpon>
     </EmbeddedResource>
@@ -478,11 +519,17 @@
     <EmbeddedResource Include="frm_guards_salary_scale_mapping_dashboard.resx">
       <DependentUpon>frm_guards_salary_scale_mapping_dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_guard_deployment_summary.resx">
+      <DependentUpon>frm_guard_deployment_summary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_guard_lists.resx">
       <DependentUpon>frm_guard_lists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_home_adress_of_origin.resx">
       <DependentUpon>frm_home_adress_of_origin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_hr_panel.resx">
+      <DependentUpon>frm_hr_panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_kampala_active_guards_report.resx">
       <DependentUpon>frm_kampala_active_guards_report.cs</DependentUpon>
@@ -492,6 +539,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_lookups.resx">
       <DependentUpon>frm_lookups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_clients.resx">
+      <DependentUpon>frm_manage_clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_client_locations.resx">
+      <DependentUpon>frm_manage_client_locations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_officer_img_large.resx">
       <DependentUpon>frm_officer_img_large.cs</DependentUpon>
@@ -528,6 +581,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_users.resx">
       <DependentUpon>frm_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_wages_panel.resx">
+      <DependentUpon>frm_wages_panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="guard_employment_record_report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

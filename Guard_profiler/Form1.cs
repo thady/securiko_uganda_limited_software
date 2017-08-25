@@ -22,7 +22,8 @@ namespace Guard_profiler
 
         private void guardProfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frm_hr_panel hr_panel = new frm_hr_panel();
+            hr_panel.ShowDialog();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -206,6 +207,23 @@ namespace Guard_profiler
         {
             frm_assign_salary_scales_to_guards scale = new frm_assign_salary_scales_to_guards();
             scale.Show();
+        }
+
+        private void nonGuardProfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frm_accounts_panel accounts = new frm_accounts_panel();
+            accounts.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            frm_wages_panel wages = new frm_wages_panel();
+            wages.ShowDialog();
         }
     }
 }

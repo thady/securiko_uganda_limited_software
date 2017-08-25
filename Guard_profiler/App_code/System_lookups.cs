@@ -146,8 +146,8 @@ namespace Guard_profiler.App_code
                    cmd.CommandTimeout = 3600;
 
                    cmd.CommandType = CommandType.StoredProcedure;
-                   cmd.Parameters.Add("QueryName", SqlDbType.NVarChar, 50);
-                   cmd.Parameters["QueryName"].Value = myQuery;
+                   cmd.Parameters.Add("@QueryName", SqlDbType.NVarChar, 50);
+                   cmd.Parameters["@QueryName"].Value = myQuery;
 
                    if (conn.State == ConnectionState.Closed)
                    {
@@ -178,5 +178,55 @@ namespace Guard_profiler.App_code
            }
            return dt;
        }
+
+        //Return active guards by branch
+        public static DataTable SELECT_LIST_OF_ACTIVE_GUARDS_BY_BRANCH(string myQuery,string branch_name)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter Adapt;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["sg_conn_str"].ToString()))
+                using (SqlCommand cmd = new SqlCommand("sp_system_lookups", conn))
+                {
+                    cmd.CommandTimeout = 3600;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@QueryName", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@QueryName"].Value = myQuery;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@branch", SqlDbType.NVarChar, 100);
+                    cmd.Parameters["@branch"].Value = branch_name;
+
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    cmd.Connection = conn;
+                    Adapt = new SqlDataAdapter(cmd);
+                    Adapt.Fill(dt);
+
+                    cmd.Parameters.Clear();
+
+                    if (conn.State != ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
+        }
     }
 }
