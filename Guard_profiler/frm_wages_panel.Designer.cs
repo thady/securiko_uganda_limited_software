@@ -145,6 +145,7 @@
             this.btn_deploy_guards_batch.TabIndex = 2;
             this.btn_deploy_guards_batch.Text = "Deploy Guards(Batch)";
             this.btn_deploy_guards_batch.UseVisualStyleBackColor = true;
+            this.btn_deploy_guards_batch.Click += new System.EventHandler(this.btn_deploy_guards_batch_Click);
             // 
             // btn_deployment_summary
             // 

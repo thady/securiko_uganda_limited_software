@@ -101,6 +101,7 @@
     <Compile Include="App_code\Guard_deployment.cs" />
     <Compile Include="App_code\Guard_Employment_Records.cs" />
     <Compile Include="App_code\HeadShotEngine.cs" />
+    <Compile Include="App_code\ole_db_conn.cs" />
     <Compile Include="App_code\Position_Codes.cs" />
     <Compile Include="App_code\Salary_scales.cs" />
     <Compile Include="App_code\Set_Report_logons.cs" />
@@ -269,6 +270,12 @@
     <Compile Include="frm_guard_deployment_summary.Designer.cs">
       <DependentUpon>frm_guard_deployment_summary.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_guard_deployment_summary_batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_guard_deployment_summary_batch.Designer.cs">
+      <DependentUpon>frm_guard_deployment_summary_batch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_guard_lists.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -436,6 +443,12 @@
     <Compile Include="sg_profiles.Designer.cs">
       <DependentUpon>sg_profiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="test_ole_db_conn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test_ole_db_conn.Designer.cs">
+      <DependentUpon>test_ole_db_conn.cs</DependentUpon>
+    </Compile>
     <Compile Include="update_first_last_names.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -521,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_guard_deployment_summary.resx">
       <DependentUpon>frm_guard_deployment_summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_guard_deployment_summary_batch.resx">
+      <DependentUpon>frm_guard_deployment_summary_batch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_guard_lists.resx">
       <DependentUpon>frm_guard_lists.cs</DependentUpon>
@@ -610,6 +626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sg_profiles.resx">
       <DependentUpon>sg_profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test_ole_db_conn.resx">
+      <DependentUpon>test_ole_db_conn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="update_first_last_names.resx">
       <DependentUpon>update_first_last_names.cs</DependentUpon>

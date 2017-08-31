@@ -22,6 +22,11 @@ namespace Guard_profiler.App_code
         public static string _client_code = String.Empty;
         public static string _client_id = String.Empty;
 
+        //deployment period static params
+        public static string _active_deployment_id = String.Empty;
+        public static DateTime _deployment_start_date = DateTime.Now;
+        public static DateTime _deployment_end_date = DateTime.Now;
+
         public static string GET_OfficerID()
         {
             return OfficerID;

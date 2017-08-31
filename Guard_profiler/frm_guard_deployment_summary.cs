@@ -31,6 +31,10 @@ namespace Guard_profiler
             cbo_deploy_type.Text = "Normal";//set deploy type to norma...will refactor this line later
 
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            //set the current deployment period
+            dt_start_date.Value = SystemConst._deployment_start_date;
+            dt_end_date.Value = SystemConst._deployment_end_date;
         }
 
 

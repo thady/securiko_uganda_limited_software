@@ -33,6 +33,9 @@ namespace Guard_profiler
 
             frmLogin login = new frmLogin();
             login.ShowDialog();
+
+            //load current deployment period
+            Set_current_deployment_periods();
         }
 
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -224,6 +227,24 @@ namespace Guard_profiler
         {
             frm_wages_panel wages = new frm_wages_panel();
             wages.ShowDialog();
+        }
+
+        protected void Set_current_deployment_periods()
+        {
+            DataTable dt = Guard_deployment.Select_active_deployment_period("select_active_deployment_period");
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dtRow = dt.Rows[0];
+                SystemConst._active_deployment_id = Convert.ToInt32(dtRow["deploy_id"].ToString()).ToString();
+                SystemConst._deployment_start_date = Convert.ToDateTime(dtRow["deploy_start_date"]);
+                SystemConst._deployment_end_date = Convert.ToDateTime(dtRow["deploy_end_date"]);
+            }
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            test_ole_db_conn ol = new test_ole_db_conn();
+            ol.Show();
         }
     }
 }

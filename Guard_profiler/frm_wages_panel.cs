@@ -28,5 +28,11 @@ namespace Guard_profiler
             frm_manage_clients clients = new frm_manage_clients();
             clients.Show();
         }
+
+        private void btn_deploy_guards_batch_Click(object sender, EventArgs e)
+        {
+            frm_guard_deployment_summary_batch batch_deploy = new frm_guard_deployment_summary_batch();
+            batch_deploy.Show();
+        }
     }
 }

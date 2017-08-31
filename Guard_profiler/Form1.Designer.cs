@@ -43,6 +43,7 @@
             this.guardProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardProfilesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nonGuardProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.activeGuardsByBranchReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,6 @@
             this.manageDepartmentsBranchesPositionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.updatePositionCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -216,6 +216,13 @@
             this.nonGuardProfilesToolStripMenuItem.Text = "Other Staff Profiles";
             this.nonGuardProfilesToolStripMenuItem.Click += new System.EventHandler(this.nonGuardProfilesToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(69, 57);
+            this.toolStripMenuItem2.Text = "Wages";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
+            // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
@@ -322,13 +329,6 @@
             this.updatePositionCodesToolStripMenuItem.Size = new System.Drawing.Size(367, 26);
             this.updatePositionCodesToolStripMenuItem.Text = "Update Position Codes";
             this.updatePositionCodesToolStripMenuItem.Click += new System.EventHandler(this.updatePositionCodesToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(69, 57);
-            this.toolStripMenuItem2.Text = "Wages";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
             // 
             // frmMain
             // 

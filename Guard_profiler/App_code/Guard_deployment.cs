@@ -205,5 +205,103 @@ namespace Guard_profiler.App_code
             }
             return dt;
         }
+
+        //return active deployment period
+        public static DataTable Select_active_deployment_period(string myQuery)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter Adapt;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["sg_conn_str"].ToString()))
+                using (SqlCommand cmd = new SqlCommand("sp_guard_deployment_summary", conn))
+                {
+                    cmd.CommandTimeout = 3600;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@QueryName", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@QueryName"].Value = myQuery;
+
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    cmd.Connection = conn;
+                    Adapt = new SqlDataAdapter(cmd);
+                    Adapt.Fill(dt);
+
+                    cmd.Parameters.Clear();
+
+                    if (conn.State != ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
+        }
+
+        //return guards for batch deployment
+        public static DataTable select_list_of_guards_by_branch_and_date_for_batch_deployment(string myQuery,string branch_name)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter Adapt;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["sg_conn_str"].ToString()))
+                using (SqlCommand cmd = new SqlCommand("sp_guard_deployment_summary", conn))
+                {
+                    cmd.CommandTimeout = 3600;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@QueryName", SqlDbType.NVarChar, 200);
+                    cmd.Parameters["@QueryName"].Value = myQuery;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@branch_name", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@branch_name"].Value = branch_name;
+
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    cmd.Connection = conn;
+                    Adapt = new SqlDataAdapter(cmd);
+                    Adapt.Fill(dt);
+
+                    int count = dt.Rows.Count;
+
+                    cmd.Parameters.Clear();
+
+                    if (conn.State != ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
+        }
     }
 }

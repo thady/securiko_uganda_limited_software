@@ -36,13 +36,13 @@
             this.txtuser = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox1.SuspendLayout();
             this.GroupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lognpxt)).BeginInit();
-            this.GroupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -55,7 +55,7 @@
             this.GroupBox1.Controls.Add(this.Label2);
             this.GroupBox1.Location = new System.Drawing.Point(4, 4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(486, 175);
+            this.GroupBox1.Size = new System.Drawing.Size(384, 175);
             this.GroupBox1.TabIndex = 4;
             this.GroupBox1.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             this.txtpass.Location = new System.Drawing.Point(158, 113);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(261, 26);
+            this.txtpass.Size = new System.Drawing.Size(206, 26);
             this.txtpass.TabIndex = 5;
             // 
             // txtuser
@@ -99,7 +99,7 @@
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(158, 61);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(261, 26);
+            this.txtuser.Size = new System.Drawing.Size(206, 26);
             this.txtuser.TabIndex = 4;
             // 
             // Label3
@@ -122,25 +122,14 @@
             this.Label2.TabIndex = 1;
             this.Label2.Text = "Username";
             // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.GroupBox2.Controls.Add(this.btnClose);
-            this.GroupBox2.Controls.Add(this.btnLogin);
-            this.GroupBox2.Location = new System.Drawing.Point(0, 186);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(495, 54);
-            this.GroupBox2.TabIndex = 5;
-            this.GroupBox2.TabStop = false;
-            // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Blue;
-            this.btnClose.Location = new System.Drawing.Point(184, 13);
+            this.btnClose.Location = new System.Drawing.Point(86, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(98, 38);
+            this.btnClose.Size = new System.Drawing.Size(98, 30);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -148,16 +137,26 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Blue;
-            this.btnLogin.Location = new System.Drawing.Point(288, 13);
+            this.btnLogin.Location = new System.Drawing.Point(190, 3);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(174, 38);
+            this.btnLogin.Size = new System.Drawing.Size(104, 30);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Location = new System.Drawing.Point(4, 185);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(384, 37);
+            this.panel1.TabIndex = 5;
             // 
             // frmLogin
             // 
@@ -165,10 +164,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(494, 251);
+            this.ClientSize = new System.Drawing.Size(390, 223);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.GroupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
@@ -179,7 +178,7 @@
             this.GroupBox1.PerformLayout();
             this.GroupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lognpxt)).EndInit();
-            this.GroupBox2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -193,8 +192,8 @@
         internal System.Windows.Forms.TextBox txtuser;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.Button btnLogin;
         internal System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel1;
     }
 }

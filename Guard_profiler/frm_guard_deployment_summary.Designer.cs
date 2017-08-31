@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_guard_deployment_summary));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_additional_data = new System.Windows.Forms.Button();
             this.btn_reports = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_save_and_new = new System.Windows.Forms.Button();
@@ -99,20 +100,31 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.btn_additional_data);
             this.panel6.Controls.Add(this.btn_reports);
             this.panel6.Location = new System.Drawing.Point(517, 465);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(390, 38);
             this.panel6.TabIndex = 31;
             // 
+            // btn_additional_data
+            // 
+            this.btn_additional_data.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_additional_data.Location = new System.Drawing.Point(1, 3);
+            this.btn_additional_data.Name = "btn_additional_data";
+            this.btn_additional_data.Size = new System.Drawing.Size(233, 32);
+            this.btn_additional_data.TabIndex = 1;
+            this.btn_additional_data.Text = "ADDITIONAL GUARD DEPLOYMENT DATA";
+            this.btn_additional_data.UseVisualStyleBackColor = false;
+            // 
             // btn_reports
             // 
             this.btn_reports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_reports.Location = new System.Drawing.Point(6, 3);
+            this.btn_reports.Location = new System.Drawing.Point(233, 3);
             this.btn_reports.Name = "btn_reports";
-            this.btn_reports.Size = new System.Drawing.Size(381, 32);
+            this.btn_reports.Size = new System.Drawing.Size(154, 32);
             this.btn_reports.TabIndex = 0;
-            this.btn_reports.Text = "GENERAL DEPLOYMENT SUMMARY REPORTS";
+            this.btn_reports.Text = "DEPLOYMENT REPORTS";
             this.btn_reports.UseVisualStyleBackColor = false;
             // 
             // panel5
@@ -506,6 +518,7 @@
             // 
             // dt_end_date
             // 
+            this.dt_end_date.Enabled = false;
             this.dt_end_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_end_date.Location = new System.Drawing.Point(233, 20);
             this.dt_end_date.Name = "dt_end_date";
@@ -535,6 +548,7 @@
             // 
             // dt_start_date
             // 
+            this.dt_start_date.Enabled = false;
             this.dt_start_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_start_date.Location = new System.Drawing.Point(3, 20);
             this.dt_start_date.Name = "dt_start_date";
@@ -549,9 +563,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 15);
+            this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Enter deployment period";
+            this.label2.Text = "Deployment period";
             // 
             // label1
             // 
@@ -649,5 +663,6 @@
         private System.Windows.Forms.Button btn_reports;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_client_code;
+        private System.Windows.Forms.Button btn_additional_data;
     }
 }
