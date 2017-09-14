@@ -34,5 +34,23 @@ namespace Guard_profiler
             frm_guard_deployment_summary_batch batch_deploy = new frm_guard_deployment_summary_batch();
             batch_deploy.Show();
         }
+
+        private void btn_other_data_Click(object sender, EventArgs e)
+        {
+            frm_guard_deployment_additional_data additional = new frm_guard_deployment_additional_data();
+            additional.Show();
+        }
+
+        private void btn_deployment_periods_Click(object sender, EventArgs e)
+        {
+            frm_deployment_periods periods = new frm_deployment_periods();
+            periods.ShowDialog();
+        }
+
+        private void btn_public_holidays_Click(object sender, EventArgs e)
+        {
+            frm_manage_public_holidays holidays = new frm_manage_public_holidays();
+            holidays.ShowDialog();
+        }
     }
 }

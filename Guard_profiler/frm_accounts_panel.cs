@@ -34,5 +34,11 @@ namespace Guard_profiler
             frm_assign_salary_scales_to_guards scale = new frm_assign_salary_scales_to_guards();
             scale.Show();
         }
+
+        private void btn_payroll_setup_Click(object sender, EventArgs e)
+        {
+            frm_setup_payroll payroll = new frm_setup_payroll();
+            payroll.Show();
+        }
     }
 }

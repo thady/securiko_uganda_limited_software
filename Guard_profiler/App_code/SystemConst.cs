@@ -27,6 +27,17 @@ namespace Guard_profiler.App_code
         public static DateTime _deployment_start_date = DateTime.Now;
         public static DateTime _deployment_end_date = DateTime.Now;
 
+        //these static variables are for the module for editing a deployment record of a specific guard when the use choses edit
+        public static string _client_codee = String.Empty;
+        public static string _client_location = String.Empty;
+        public static string _fire_arm_serial = String.Empty;
+        public static int _ammunition_count = 0;
+        public static string _shift_type = String.Empty;
+        public static bool _is_leave_day_for_guard = false;
+        public static bool _is_public_holiday = false;
+        public static string _record_guid = String.Empty;
+        public static string _guard_name = String.Empty;
+
         public static string GET_OfficerID()
         {
             return OfficerID;

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_wages_panel));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_deployment_periods = new System.Windows.Forms.Button();
             this.btn_lst = new System.Windows.Forms.Button();
             this.btn_clients = new System.Windows.Forms.Button();
             this.btn_fire_arm_guard_assign = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.btn_deployment_summary = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.btn_deployment_periods);
             this.panel1.Controls.Add(this.btn_lst);
             this.panel1.Controls.Add(this.btn_clients);
             this.panel1.Controls.Add(this.btn_fire_arm_guard_assign);
@@ -72,9 +75,19 @@
             this.panel1.Size = new System.Drawing.Size(565, 306);
             this.panel1.TabIndex = 1;
             // 
+            // btn_deployment_periods
+            // 
+            this.btn_deployment_periods.Location = new System.Drawing.Point(162, 3);
+            this.btn_deployment_periods.Name = "btn_deployment_periods";
+            this.btn_deployment_periods.Size = new System.Drawing.Size(146, 45);
+            this.btn_deployment_periods.TabIndex = 11;
+            this.btn_deployment_periods.Text = "Manage Deployment Periods";
+            this.btn_deployment_periods.UseVisualStyleBackColor = true;
+            this.btn_deployment_periods.Click += new System.EventHandler(this.btn_deployment_periods_Click);
+            // 
             // btn_lst
             // 
-            this.btn_lst.Location = new System.Drawing.Point(162, 153);
+            this.btn_lst.Location = new System.Drawing.Point(162, 253);
             this.btn_lst.Name = "btn_lst";
             this.btn_lst.Size = new System.Drawing.Size(146, 45);
             this.btn_lst.TabIndex = 10;
@@ -83,7 +96,7 @@
             // 
             // btn_clients
             // 
-            this.btn_clients.Location = new System.Drawing.Point(162, 102);
+            this.btn_clients.Location = new System.Drawing.Point(162, 202);
             this.btn_clients.Name = "btn_clients";
             this.btn_clients.Size = new System.Drawing.Size(146, 45);
             this.btn_clients.TabIndex = 9;
@@ -93,7 +106,7 @@
             // 
             // btn_fire_arm_guard_assign
             // 
-            this.btn_fire_arm_guard_assign.Location = new System.Drawing.Point(162, 51);
+            this.btn_fire_arm_guard_assign.Location = new System.Drawing.Point(162, 151);
             this.btn_fire_arm_guard_assign.Name = "btn_fire_arm_guard_assign";
             this.btn_fire_arm_guard_assign.Size = new System.Drawing.Size(146, 45);
             this.btn_fire_arm_guard_assign.TabIndex = 8;
@@ -102,7 +115,7 @@
             // 
             // btn_fire_arms
             // 
-            this.btn_fire_arms.Location = new System.Drawing.Point(162, 3);
+            this.btn_fire_arms.Location = new System.Drawing.Point(162, 103);
             this.btn_fire_arms.Name = "btn_fire_arms";
             this.btn_fire_arms.Size = new System.Drawing.Size(146, 45);
             this.btn_fire_arms.TabIndex = 7;
@@ -111,12 +124,13 @@
             // 
             // btn_public_holidays
             // 
-            this.btn_public_holidays.Location = new System.Drawing.Point(3, 153);
+            this.btn_public_holidays.Location = new System.Drawing.Point(162, 51);
             this.btn_public_holidays.Name = "btn_public_holidays";
             this.btn_public_holidays.Size = new System.Drawing.Size(146, 45);
             this.btn_public_holidays.TabIndex = 6;
             this.btn_public_holidays.Text = "Manage Public Hoildays";
             this.btn_public_holidays.UseVisualStyleBackColor = true;
+            this.btn_public_holidays.Click += new System.EventHandler(this.btn_public_holidays_Click);
             // 
             // splitter2
             // 
@@ -136,6 +150,7 @@
             this.btn_other_data.TabIndex = 3;
             this.btn_other_data.Text = "Guard additional monthly data";
             this.btn_other_data.UseVisualStyleBackColor = true;
+            this.btn_other_data.Click += new System.EventHandler(this.btn_other_data_Click);
             // 
             // btn_deploy_guards_batch
             // 
@@ -172,11 +187,22 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Yellow;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 28);
+            this.label1.Location = new System.Drawing.Point(33, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 16);
+            this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Wage Management";
+            this.label1.Text = "Deployment";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Yellow;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(184, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Admin Lookups";
             // 
             // frm_wages_panel
             // 
@@ -184,6 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(565, 354);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -214,5 +241,7 @@
         private System.Windows.Forms.Button btn_clients;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_lst;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_deployment_periods;
     }
 }

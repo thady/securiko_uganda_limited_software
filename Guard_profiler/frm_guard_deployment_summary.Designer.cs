@@ -42,6 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.gdv_deployment_summary = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chk_weekend = new System.Windows.Forms.CheckBox();
             this.txt_client_code = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbo_working_shift = new System.Windows.Forms.ComboBox();
@@ -76,6 +77,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.reSize1 = new LarcomAndYoung.Windows.Forms.ReSize(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -83,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gdv_deployment_summary)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,10 +196,15 @@
             // 
             // gdv_deployment_summary
             // 
+            this.gdv_deployment_summary.AllowUserToAddRows = false;
+            this.gdv_deployment_summary.AllowUserToDeleteRows = false;
+            this.gdv_deployment_summary.AllowUserToResizeColumns = false;
+            this.gdv_deployment_summary.AllowUserToResizeRows = false;
             this.gdv_deployment_summary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gdv_deployment_summary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdv_deployment_summary.Location = new System.Drawing.Point(3, 3);
             this.gdv_deployment_summary.Name = "gdv_deployment_summary";
+            this.gdv_deployment_summary.ReadOnly = true;
             this.gdv_deployment_summary.Size = new System.Drawing.Size(383, 433);
             this.gdv_deployment_summary.TabIndex = 0;
             // 
@@ -203,6 +212,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.chk_weekend);
             this.panel2.Controls.Add(this.txt_client_code);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.cbo_working_shift);
@@ -235,6 +245,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(498, 443);
             this.panel2.TabIndex = 0;
+            // 
+            // chk_weekend
+            // 
+            this.chk_weekend.AutoSize = true;
+            this.chk_weekend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.chk_weekend.Enabled = false;
+            this.chk_weekend.Location = new System.Drawing.Point(407, 144);
+            this.chk_weekend.Name = "chk_weekend";
+            this.chk_weekend.Size = new System.Drawing.Size(73, 17);
+            this.chk_weekend.TabIndex = 32;
+            this.chk_weekend.Text = "Weekend";
+            this.chk_weekend.UseVisualStyleBackColor = false;
             // 
             // txt_client_code
             // 
@@ -454,6 +476,7 @@
             // 
             this.chk_public_holiday.AutoSize = true;
             this.chk_public_holiday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.chk_public_holiday.Enabled = false;
             this.chk_public_holiday.Location = new System.Drawing.Point(150, 142);
             this.chk_public_holiday.Name = "chk_public_holiday";
             this.chk_public_holiday.Size = new System.Drawing.Size(93, 17);
@@ -492,6 +515,7 @@
             this.dt_deployment_date.ShowCheckBox = true;
             this.dt_deployment_date.Size = new System.Drawing.Size(227, 21);
             this.dt_deployment_date.TabIndex = 4;
+            this.dt_deployment_date.ValueChanged += new System.EventHandler(this.dt_deployment_date_ValueChanged);
             // 
             // label5
             // 
@@ -588,12 +612,34 @@
             this.reSize1.InitialHostContainerWidth = 913D;
             this.reSize1.Tag = null;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Location = new System.Drawing.Point(143, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(769, 23);
+            this.panel7.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(115, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(592, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Remember to always set your public holidays for the current deployment period bef" +
+    "ore deploying guards";
+            // 
             // frm_guard_deployment_summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(913, 537);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -611,6 +657,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,5 +712,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_client_code;
         private System.Windows.Forms.Button btn_additional_data;
+        private System.Windows.Forms.CheckBox chk_weekend;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label8;
     }
 }

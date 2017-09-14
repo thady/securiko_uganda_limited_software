@@ -222,6 +222,18 @@
     <Compile Include="frm_current_residential_adress.Designer.cs">
       <DependentUpon>frm_current_residential_adress.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_deployment_periods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_deployment_periods.Designer.cs">
+      <DependentUpon>frm_deployment_periods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit_guard_deployment_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_guard_deployment_record.Designer.cs">
+      <DependentUpon>frm_edit_guard_deployment_record.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_edit_guard_number.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +275,12 @@
     </Compile>
     <Compile Include="frm_guards_salary_scale_mapping_dashboard.Designer.cs">
       <DependentUpon>frm_guards_salary_scale_mapping_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_guard_deployment_additional_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_guard_deployment_additional_data.Designer.cs">
+      <DependentUpon>frm_guard_deployment_additional_data.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_guard_deployment_summary.cs">
       <SubType>Form</SubType>
@@ -324,6 +342,12 @@
     <Compile Include="frm_manage_client_locations.Designer.cs">
       <DependentUpon>frm_manage_client_locations.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_manage_public_holidays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_public_holidays.Designer.cs">
+      <DependentUpon>frm_manage_public_holidays.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_officer_img_large.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +395,12 @@
     </Compile>
     <Compile Include="frm_salary_scale_guards.Designer.cs">
       <DependentUpon>frm_salary_scale_guards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_setup_payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_setup_payroll.Designer.cs">
+      <DependentUpon>frm_setup_payroll.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_sg_list_report.cs">
       <SubType>Form</SubType>
@@ -511,6 +541,12 @@
     <EmbeddedResource Include="frm_current_residential_adress.resx">
       <DependentUpon>frm_current_residential_adress.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_deployment_periods.resx">
+      <DependentUpon>frm_deployment_periods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_guard_deployment_record.resx">
+      <DependentUpon>frm_edit_guard_deployment_record.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_edit_guard_number.resx">
       <DependentUpon>frm_edit_guard_number.cs</DependentUpon>
     </EmbeddedResource>
@@ -531,6 +567,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_guards_salary_scale_mapping_dashboard.resx">
       <DependentUpon>frm_guards_salary_scale_mapping_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_guard_deployment_additional_data.resx">
+      <DependentUpon>frm_guard_deployment_additional_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_guard_deployment_summary.resx">
       <DependentUpon>frm_guard_deployment_summary.cs</DependentUpon>
@@ -562,6 +601,9 @@
     <EmbeddedResource Include="frm_manage_client_locations.resx">
       <DependentUpon>frm_manage_client_locations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_public_holidays.resx">
+      <DependentUpon>frm_manage_public_holidays.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_officer_img_large.resx">
       <DependentUpon>frm_officer_img_large.cs</DependentUpon>
     </EmbeddedResource>
@@ -585,6 +627,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_salary_scale_guards.resx">
       <DependentUpon>frm_salary_scale_guards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_setup_payroll.resx">
+      <DependentUpon>frm_setup_payroll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_sg_list_report.resx">
       <DependentUpon>frm_sg_list_report.cs</DependentUpon>

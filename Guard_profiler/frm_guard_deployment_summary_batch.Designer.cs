@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_guard_deployment_summary_batch));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.chk_save_status = new System.Windows.Forms.CheckBox();
+            this.btn_search = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_guard_number = new System.Windows.Forms.TextBox();
@@ -66,7 +67,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.chk_save_status);
+            this.panel1.Controls.Add(this.btn_search);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txt_guard_number);
@@ -84,15 +86,27 @@
             this.panel1.Size = new System.Drawing.Size(874, 571);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // chk_save_status
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(510, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 27);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
+            this.chk_save_status.AutoSize = true;
+            this.chk_save_status.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.chk_save_status.ForeColor = System.Drawing.Color.Black;
+            this.chk_save_status.Location = new System.Drawing.Point(687, 87);
+            this.chk_save_status.Name = "chk_save_status";
+            this.chk_save_status.Size = new System.Drawing.Size(181, 17);
+            this.chk_save_status.TabIndex = 36;
+            this.chk_save_status.Text = "Batch deployment records saved";
+            this.chk_save_status.UseVisualStyleBackColor = false;
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_search.Location = new System.Drawing.Point(510, 80);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(56, 27);
+            this.btn_search.TabIndex = 34;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -164,6 +178,7 @@
             this.gdv_deployment_summary.Name = "gdv_deployment_summary";
             this.gdv_deployment_summary.Size = new System.Drawing.Size(855, 449);
             this.gdv_deployment_summary.TabIndex = 1;
+            this.gdv_deployment_summary.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdv_deployment_summary_CellDoubleClick);
             // 
             // dt_end_date
             // 
@@ -249,6 +264,7 @@
             this.chk_apply_to_all.TabIndex = 35;
             this.chk_apply_to_all.Text = "Apply to all";
             this.chk_apply_to_all.UseVisualStyleBackColor = false;
+            this.chk_apply_to_all.CheckedChanged += new System.EventHandler(this.chk_apply_to_all_CheckedChanged);
             // 
             // button3
             // 
@@ -259,6 +275,7 @@
             this.button3.TabIndex = 34;
             this.button3.Text = "Load Guard List for selected date";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -279,6 +296,7 @@
             this.btn_update.TabIndex = 32;
             this.btn_update.Text = "Save or Update Batch Deployment";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_guard_list
             // 
@@ -299,6 +317,7 @@
             this.cbo_working_shift.Name = "cbo_working_shift";
             this.cbo_working_shift.Size = new System.Drawing.Size(81, 23);
             this.cbo_working_shift.TabIndex = 30;
+            this.cbo_working_shift.SelectedIndexChanged += new System.EventHandler(this.cbo_working_shift_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -341,6 +360,7 @@
             this.dt_deployment_date.ShowCheckBox = true;
             this.dt_deployment_date.Size = new System.Drawing.Size(135, 21);
             this.dt_deployment_date.TabIndex = 5;
+            this.dt_deployment_date.ValueChanged += new System.EventHandler(this.dt_deployment_date_ValueChanged);
             // 
             // label5
             // 
@@ -410,9 +430,10 @@
         private System.Windows.Forms.TextBox txt_guard_number;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_search;
         private LarcomAndYoung.Windows.Forms.ReSize reSize1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox chk_apply_to_all;
+        private System.Windows.Forms.CheckBox chk_save_status;
     }
 }

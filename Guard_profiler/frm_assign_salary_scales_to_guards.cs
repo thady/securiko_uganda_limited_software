@@ -57,7 +57,7 @@ namespace Guard_profiler
                 gdv_salary_scales.RowHeadersDefaultCellStyle.BackColor = Color.Black;
 
                 // Set the selection background color for all the cells.
-                gdv_salary_scales.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                gdv_salary_scales.DefaultCellStyle.SelectionBackColor = Color.Cyan;
                 gdv_salary_scales.DefaultCellStyle.SelectionForeColor = Color.Black;
 
                 foreach (DataGridViewColumn c in gdv_salary_scales.Columns)
@@ -121,7 +121,7 @@ namespace Guard_profiler
                 gdv_guard_salaries.RowHeadersDefaultCellStyle.BackColor = Color.Black;
 
                 // Set the selection background color for all the cells.
-                gdv_guard_salaries.DefaultCellStyle.SelectionBackColor = Color.White;
+                gdv_guard_salaries.DefaultCellStyle.SelectionBackColor = Color.Cyan;
                 gdv_guard_salaries.DefaultCellStyle.SelectionForeColor = Color.Black;
 
                 foreach (DataGridViewColumn c in gdv_guard_salaries.Columns)

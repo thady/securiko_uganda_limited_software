@@ -176,7 +176,15 @@ namespace Guard_profiler
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            Save_guard_deployment_record();
+            if (dt_deployment_date.Value.Date < dt_start_date.Value.Date || dt_deployment_date.Value.Date > dt_end_date.Value.Date)
+            {
+                MessageBox.Show("Selected date must be within the current deployment period", "Guard Deployments", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                Save_guard_deployment_record();
+            }
         }
 
         protected void Save_guard_deployment_record()
@@ -191,7 +199,7 @@ namespace Guard_profiler
             {
                 Guard_deployment.Save_new_deployment_record("save_new_deployment_record", dt_start_date.Value.Date, dt_end_date.Value.Date, SystemConst._username, txt_guard_number.Text, dt_deployment_date.Value.Date,
             cbo_deploy_type.Text, cbo_branch.Text, txt_client_code.Text, cbo_customer_location.Text, cbo_guard_name.Text, txt_fire_arm_serial.Text, txt_ammunition_count.Text != String.Empty ? Convert.ToInt32(txt_ammunition_count.Text) : 0, cbo_working_shift.Text, chk_leave.Checked == true ? true : false,
-            chk_public_holiday.Checked == true ? true : false);
+            chk_public_holiday.Checked == true ? true : false,chk_weekend.Checked == true?true:false);
 
                 MessageBox.Show("Successfully deployed guard for this date", "Guard Deployments", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Return_list_of_deployments_by_deploy_id();
@@ -209,11 +217,12 @@ namespace Guard_profiler
                 gdv_deployment_summary.Columns["guard_name"].HeaderText= "Guard";
                 gdv_deployment_summary.Columns["branch_name"].HeaderText = "Branch";
                 gdv_deployment_summary.Columns["deploy_date"].HeaderText = "Date";
-                gdv_deployment_summary.Columns["deploy_type"].HeaderText = "Deploy Type";
+                gdv_deployment_summary.Columns["deploy_type"].HeaderText = "D.Type";
                 gdv_deployment_summary.Columns["shift_type"].HeaderText = "Shift";
 
                 gdv_deployment_summary.Columns["deploy_date"].Width = 40;
-                gdv_deployment_summary.Columns["guard_name"].Width = 150;
+                gdv_deployment_summary.Columns["guard_name"].Width = 110;
+                gdv_deployment_summary.Columns["deploy_type"].Width = 50;
 
                 gdv_deployment_summary.RowsDefaultCellStyle.BackColor = Color.LightGray;
                 gdv_deployment_summary.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
@@ -235,6 +244,29 @@ namespace Guard_profiler
                 //set the background color of the header row
                 gdv_deployment_summary.ColumnHeadersDefaultCellStyle.BackColor = Color.CadetBlue;
                 gdv_deployment_summary.EnableHeadersVisualStyles = false;
+            }
+        }
+
+        private void dt_deployment_date_ValueChanged(object sender, EventArgs e)
+        {
+            //check if selected date is a weekend
+            if (dt_deployment_date.Value.Date.DayOfWeek == DayOfWeek.Saturday || dt_deployment_date.Value.Date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                chk_weekend.Checked = true;
+            }
+            else
+            {
+                chk_weekend.Checked = false;
+            }
+
+            //check if selected date is a public holiday
+            if (Guard_deployment.check_if_deployment_date_is_public_holiday("check_if_deployment_date_is_public_holiday", dt_deployment_date.Value.Date) > 0)
+            {
+                chk_public_holiday.Checked = true;
+            }
+            else
+            {
+                chk_public_holiday.Checked = false;
             }
         }
     }
